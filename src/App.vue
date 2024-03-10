@@ -2,7 +2,7 @@
   <el-container class="app-container">
     <el-aside class="app-aside">
       <div class="app-aside-header">
-        <div class="app-aside-header-left">
+        <div class="app-aside-header-left" @click="routerTo('/')">
           <div class="app-aside-header-title">Chatting</div>
           <div class="app-aside-header-sub-title">Let's Chatting.</div>
         </div>
@@ -188,6 +188,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .app-aside-header-title {
@@ -294,5 +295,8 @@ button {
 
 .app-main {
   padding: 0;
+  overflow-y: hidden;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 </style>
