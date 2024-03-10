@@ -11,61 +11,150 @@
         </div>
       </div>
       <div class="app-aside-header-bar">
-        <ElButton class="app-aside-header-bar-btn1">
-          <el-icon>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" fill="none"><defs><path id="mask_svg__a" d="M0 0h16v16H0z"></path></defs><g><mask id="mask_svg__b" fill="#fff"><use xlink:href="#mask_svg__a"></use></mask><g mask="url(#mask_svg__b)"><path d="M6 0C2.69 0 0 2.54 0 5.67s2.69 5.66 6 5.66 6-2.53 6-5.66C12 2.54 9.31 0 6 0Z" transform="translate(2 3.333)" style="stroke: rgb(51, 51, 51); stroke-width: 1.33333; stroke-opacity: 1; stroke-dasharray: 0, 0;"></path><path d="M1 0C.45 0 0 .6 0 1.33c0 .74.45 1.34 1 1.34s1-.6 1-1.34C2 .6 1.55 0 1 0Z" transform="rotate(15 -22.183 22.313)" style="stroke: rgb(51, 51, 51); stroke-width: 1.33333; stroke-opacity: 1; stroke-dasharray: 0, 0;"></path><path d="M1 0C.45 0 0 .6 0 1.33c0 .74.45 1.34 1 1.34s1-.6 1-1.34C2 .6 1.55 0 1 0Z" transform="rotate(165 5.213 5.304)" style="stroke: rgb(51, 51, 51); stroke-width: 1.33333; stroke-opacity: 1; stroke-dasharray: 0, 0;"></path><path d="M4 4.51c1.04-1.04 1.15-2.74.1-3.78C3.06-.32 1.04-.2 0 .84" transform="translate(9.667 2.493)" style="stroke: rgb(51, 51, 51); stroke-width: 1.33333; stroke-opacity: 1; stroke-dasharray: 0, 0;"></path><path d="M.84 4.51C-.2 3.47-.32 1.77.73.73 1.77-.32 3.8-.2 4.84.84" transform="translate(1.493 2.493)" style="stroke: rgb(51, 51, 51); stroke-width: 1.33333; stroke-opacity: 1; stroke-dasharray: 0, 0;"></path><path d="M0 0c.17.43.73 1.09 1.67.29.93.8 1.5.14 1.66-.29" transform="translate(6.5 11.67)" style="stroke: rgb(51, 51, 51); stroke-width: 1.33333; stroke-opacity: 1; stroke-dasharray: 0, 0;"></path></g></g></svg>
-          </el-icon>
+        <ElButton class="app-aside-header-bar-btn1" @click="routerTo('/masks')">
+          <el-icon><Opportunity /></el-icon>
           面具
         </ElButton>
         <ElButton class="app-aside-header-bar-btn2" @click="listPlugin">
-          <el-icon>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" fill="none"><g><mask id="plugin_svg__b" fill="#fff"><use xlink:href="#plugin_svg__a"></use></mask><g mask="url(#plugin_svg__b)"><path d="M6.945 1.725c.261.26.392.576.392.945V6c0 .37-.13.684-.392.945A1.288 1.288 0 0 1 6 7.337H2.67c-.37 0-.684-.13-.945-.392A1.288 1.288 0 0 1 1.333 6V2.67c0-.37.13-.684.392-.945.26-.261.576-.392.945-.392H6c.37 0 .684.13.945.392zM2.667 6c0 .002 0 .003.003.003H6c.002 0 .003 0 .003-.003V2.67c0-.002 0-.003-.003-.003H2.67c-.002 0-.003 0-.003.003zM6.945 9.058c.261.261.392.576.392.945v3.33c0 .37-.13.685-.392.946A1.288 1.288 0 0 1 6 14.67H2.67c-.37 0-.684-.13-.945-.391a1.288 1.288 0 0 1-.392-.946v-3.33c0-.369.13-.684.392-.945.26-.26.576-.391.945-.391H6c.37 0 .684.13.945.391zm-4.278 4.275c0 .003 0 .004.003.004H6c.002 0 .003-.001.003-.004v-3.33c0-.002 0-.003-.003-.003H2.67c-.002 0-.003.001-.003.003zM13.789 6.455a2.987 2.987 0 0 1-2.126.882c-.407 0-.797-.08-1.169-.238a2.97 2.97 0 0 1-.952-.645 2.983 2.983 0 0 1-.64-.956 2.984 2.984 0 0 1-.235-1.168 2.974 2.974 0 0 1 .876-2.12 2.973 2.973 0 0 1 2.12-.877c.407 0 .796.079 1.169.235.36.151.678.365.955.64a2.97 2.97 0 0 1 .883 2.122 2.988 2.988 0 0 1-.882 2.125zm-2.126-3.788c-.46 0-.853.162-1.177.486A1.603 1.603 0 0 0 10 4.33c0 .462.162.857.487 1.184.325.326.717.49 1.176.49.461 0 .855-.164 1.183-.492.327-.327.49-.721.49-1.182 0-.46-.163-.851-.489-1.176a1.618 1.618 0 0 0-1.184-.487zM14.278 9.058c.261.261.392.576.392.945v3.33c0 .37-.13.685-.392.946a1.288 1.288 0 0 1-.945.391h-3.33c-.369 0-.684-.13-.945-.391a1.288 1.288 0 0 1-.391-.946v-3.33c0-.369.13-.684.391-.945.261-.26.576-.391.945-.391h3.33c.37 0 .684.13.945.391zM10 13.333c0 .003.001.004.003.004h3.33c.003 0 .004-.001.004-.004v-3.33c0-.002-.001-.003-.004-.003h-3.33c-.002 0-.003.001-.003.003z" style="fill: rgb(51, 51, 51); opacity: 1;"></path></g></g><defs><path id="plugin_svg__a" d="M0 0h16v16H0z"></path></defs></svg>          </el-icon>
+          <el-icon><Grid /></el-icon>
           插件
         </ElButton>
       </div>
+      <div class="app-aside-header-body">
+        <div class="app-aside-header-body-chat-list">
+          <ElScrollbar :view-style="{scroolBarHeight: scroolBarHeight}">
+
+            <div class="app-aside-header-body-chat-list-item" v-for="(item, index) in list" @mouseenter="changeBackgroundColor(index, true)" 
+              @mouseleave="changeBackgroundColor(index, false)" 
+              @click="changeBorder(index, true)"
+              :style="{backgroundColor: currentHoverIndex === index ? '#f2f2f2' : '#fff', borderColor: currentClickIndex === index ? '#1d93ab' : ''}">
+            <div class="app-aside-header-body-chat-list-item-title">{{ item.title }}</div>
+            <div class="app-aside-header-body-chat-list-item-info">
+              <div class="app-aside-header-body-chat-list-item-info-count">{{ item.count }}条对话</div>
+              <div class="app-aside-header-body-chat-list-item-info-date">{{ item.date }}</div>
+            </div>
+            <div class="app-aside-header-body-chat-list-item-delete" :style="{opacity: currentHoverIndex === index ? '.5' : '0'}">
+              <el-icon><CircleCloseFilled /></el-icon>
+            </div>
+          </div>
+          </ElScrollbar>
+          
+
+        </div>
+      </div>
+      <div class="app-aside-header-tail">
+        <div class="app-aside-header-tail-actions">
+          <ElButton>
+              <el-icon><Setting /></el-icon>           
+            设置
+          </ElButton>
+        </div>
+        <div class="app-aside-header-tail-new-chat">
+          <ElButton>
+            <el-icon><CirclePlus /></el-icon>
+            新的聊天
+          </ElButton>
+        </div>
+      </div>
     </el-aside>
-    <el-main class="app-main">Main</el-main>
+    <el-main class="app-main">
+      <RouterView></RouterView>
+    </el-main>
   </el-container>
 </template>
 
 <script>
-import { ElContainer, ElHeader, ElMain, ElFooter, ElInput, ElCard, ElButton } from 'element-plus';
+import { ElContainer, ElHeader, ElMain, ElFooter, ElInput, ElCard, ElButton, ElScrollbar } from 'element-plus';
+import { ref, watch, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 
 export default {
-  name: 'App',
-  components: {
-    ElContainer,
-    ElHeader,
-    ElMain,
-    ElFooter,
-    ElInput,
-    ElCard,
-    ElButton
-  },
-  data() {
-    return {
-      inputMessage: '',
-      messages: [],
-    };
-  },
-  methods: {
-    sendMessage() {
-      if (this.inputMessage.trim()) {
-        this.messages.push({ text: this.inputMessage });
-        this.inputMessage = '';
-      }
-    },
-    listPlugin(){
+  setup() {
+    const list = ref([
+      {
+        title: '简历写手',
+        count: 4,
+        date: '2024/03/10 15:12:24'
+      },
+      {
+        title: '后勤工作',
+        count: 4,
+        date: '2024/03/10 15:12:24'
+      },
+      {
+        title: '机器学习',
+        count: 4,
+        date: '2024/03/10 15:12:24'
+      },
+      {
+        title: '职业顾问',
+        count: 4,
+        date: '2024/03/10 15:12:24'
+      },
+      {
+        title: '语言检测器',
+        count: 4,
+        date: '2024/03/10 15:12:24'
+      },
+    ]);
+    const currentClickIndex = ref(-1);
+    const currentHoverIndex = ref(-1);
+
+    const scroolBarHeight = ref(0);
+    const router = useRouter();
+    //function
+    const listPlugin = function(){
       ElMessage({
         message: '该功能仍在开发中......',
         type: 'warning'
       })
+    };
+    const calculatescroolBarHeight = () => {
+        scroolBarHeight.value = document.getElementsByClassName('app-aside-header-body-chat-list').clientHeight;
+    };
+    const changeBorder = (index, click) => {
+      currentClickIndex.value = click ? index: -1;
+    };
+    const changeBackgroundColor = (index, isHovered) => {
+      currentHoverIndex.value = isHovered ? index: -1;
+    };
+    const routerTo = (to) => {
+      router.push(to);
     }
-  },
-};
+    //onMounted
+    onMounted(() => {
+      calculatescroolBarHeight();
+      window.addEventListener('resize', calculatescroolBarHeight);
+    });
+    //watch
+    watch(scroolBarHeight, () => {
+      window.removeEventListener('resize', calculatescroolBarHeight);
+    });
+    //data
+    return {
+        scroolBarHeight,
+        calculatescroolBarHeight,
+        listPlugin,
+        list,
+        changeBackgroundColor,
+        currentHoverIndex,
+        currentClickIndex,
+        changeBorder,
+        routerTo
+      };
+    }
+}
+
 </script>
 
 <style scoped>
+button {
+  cursor: pointer;
+  border: none;
+  color: #303030;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,.05);
+  border-radius: 10px;
+}
 .app-container {
   height: 90vh;
   width: 90vw;
@@ -86,6 +175,7 @@ export default {
   padding: 20px;
   flex-direction: column;
   box-shadow: inset -2px 0 2px 0 rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
 
 .app-aside-header {
@@ -123,11 +213,6 @@ export default {
   margin-bottom: 20px;
 }
 .app-aside-header-bar > button {
-  cursor: pointer;
-  border: none;
-  color: #303030;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,.05);
-  border-radius: 10px;
   width: 45%;
 }
 .app-aside-header-bar>.app-aside-header-bar-btn1 {
@@ -138,8 +223,76 @@ export default {
   height: 16px;
   width: 16px;
 }
-.app-aside-header-bar .el-icon svg {
+.el-icon svg {
   height: 16px;
   width: 16px;
+}
+
+.app-aside-header-body {
+  flex: 1 1;
+  height: 65%;
+}
+
+.app-aside-header-tail {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.app-aside-header-tail-actions {
+  display: inline-flex;
+}
+
+.app-aside-header-tail-new-chat {
+  display: block;
+}
+
+.app-aside-header-tail button {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,.05);
+  border-radius: 10px;
+}
+
+.el-icon {
+  margin-right: 5px;
+  height: 16px;
+  width: 16px;
+}
+
+.app-aside-header-body-chat-list {
+  height: 100%;
+}
+
+.app-aside-header-body-chat-list-item {
+  cursor: grab;
+  padding: 10px 14px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,.05);
+  user-select: none;
+  border: 2px solid transparent;
+  position: relative;
+  width: 85%;
+}
+
+.app-aside-header-body-chat-list-item-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 8px;
+  color: #a6a6a6;
+}
+
+.app-aside-header-body-chat-list-item-delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.4s;
+}
+
+.app-main {
+  padding: 0;
 }
 </style>
