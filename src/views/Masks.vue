@@ -37,7 +37,7 @@
                 </ElButton>
             </div>
             <div class="masks-list">
-                <ElScrollbar :view-style="{scroolBarHeight: scroolBarHeight}">
+                <ElScrollbar>
                     <div class="item" v-for="item in masks">
                         <div class="header">
                             <div class="header-icon">
@@ -57,7 +57,6 @@
                         </div>
                     </div>
                 </ElScrollbar>
-
             </div>
         </div>
     </div>
@@ -111,30 +110,13 @@ import { ref, watch, onMounted } from 'vue';
                 })
             };
 
-            const scroolBarHeight = ref(0);
-
-            const calculatescroolBarHeight = () => {
-                scroolBarHeight.value = document.getElementsByClassName('app-aside-header-body-chat-list').clientHeight;
-            };
-
-            //onMounted
-            onMounted(() => {
-                calculatescroolBarHeight();
-                window.addEventListener('resize', calculatescroolBarHeight);
-            });
-            //watch
-            watch(scroolBarHeight, () => {
-                window.removeEventListener('resize', calculatescroolBarHeight);
-            });
 
             return {
                 name,
                 count,
                 options,
                 lang,
-                masks,
-                scroolBarHeight,
-                calculatescroolBarHeight,
+                masks
             }
         }
     }
@@ -232,14 +214,28 @@ import { ref, watch, onMounted } from 'vue';
         width: 50px;
     }
 
+    .masks-list {
+        height: 73%;
+        max-height: 84;
+    }
+
     .item {
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
         display: flex;
         padding: 20px;
         justify-content: space-between;
         border: 1px solid #dedede;
         border-bottom: 0px;
+    }
+
+    .masks-list .item:nth-child(1) {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .masks-list .item:last-child {
+        border-bottom: 1px solid #dedede;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
     .masks-list .item .header {

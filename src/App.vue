@@ -231,7 +231,7 @@ button {
 
 .app-aside-header-body {
   flex: 1 1;
-  height: 65%;
+  height: 84%;
 }
 
 .app-aside-header-tail {
